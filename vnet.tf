@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "example" {
   location = "West Europe"
 }
 
-# Create a virtual network within the resource group.
+# Create a virtual network within the newly created resource group.
 resource "azurerm_virtual_network" "example" {
   name                = "virtualnetwork-test01"
   resource_group_name = azurerm_resource_group.example.name
